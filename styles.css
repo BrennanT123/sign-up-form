@@ -153,6 +153,11 @@ fieldset
     color: rgb(255, 255, 255);
 }
 
+#submitButton:hover
+{
+    background-color: blue;
+    background-image: none;
+}
 input
 {
     border-style: solid;
@@ -205,3 +210,4 @@ input[type="password"]:invalid +.error-message
 {
     display: block;
 }
+
