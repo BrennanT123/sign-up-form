@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="backgroundSide">
+      <img
+        class="backgroundImage"
+        src="images/background-image.jpg"
+        alt="Background Image"
+      />
+      <div class="websiteName">
+        <img src="images/penguin.png" alt="Logo" />
+        Sign Up Page
+      </div>
+      <div class="backgroundCredit">
+        Photo by @beckerworks on
+        <a
+          href="https://unsplash.com/photos/a-person-standing-on-top-of-a-mountain-under-a-night-sky-F8c-KXMxnzk"
+          >unsplash</a
+        >
+      </div>
+    </div>
+    <div class="formSide">
+      <div class="formInfo">This is not a real online service. This paragraph is only here to act as
+        a placeholder text for an online form. Enter your information below.<br><br>
+
+        More text</div>
+      <form action="/form_input" method="post" id="signUpForm">
+        <p class="formTitle">Sign up below</p>
+        
+
+        <fieldset class="personalInfo">
+          <p>
+              <label for="firstName">First Name</label
+              ><input type="text" id="firstName" name="firstName" />
+          </p>
+          <p>
+              <label for="lastName">Last Name</label
+              ><input type="text" id="lastName" name="lastName" />
+          </p>
+        </fieldset>
+
+        <fieldset class="contactInfo">
+            <p>
+                <label for="emailAddress">Email</label
+                ><input type="email" id="emailAddress" name="emailAddress" />
+            </p>
+            <p>
+                <label for="phoneNumber">Phone Number</label
+                ><input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" />
+            </p>
+          </fieldset>
+
+
+        <fieldset class="password">
+            <p>
+                <label for="passwordInput" class="requiredInput">Password</label
+                ><input type="password" id="passwordInput" name="passwordInput" required/>
+                <span class="error-message">Passwords do not match</span>
+            </p>
+            <p>
+                <label for="passwordConfirm" class="requiredInput">Confirm Password</label
+                ><input type="password" id="passwordConfirm" name="passwordConfirm" required/>
+                <span class="error-message">Passwords do not match</span>
+            </p>
+          </fieldset>
+
+      </form>
+      <button type="submit" id="submitButton" form="signUpForm">Sign Up</button>
+      <div class="logIn">Already have an account? <a href="">Log in</a></div>
+    </div>
+  </body>
+</html>

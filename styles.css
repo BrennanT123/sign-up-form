@@ -1,0 +1,207 @@
+:root
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+
+    /* Custom properties */
+    --form-left-margin: 3rem;
+}
+
+@font-face {
+    font-family: titleFont;
+    src: url(../sign-up-form/fonts/sparkystonesregular-bw6ld-webfont.woff2) format("woff2"),
+    url(../sign-up-form/fonts/sparkystonesregular-bw6ld-webfont.woff) format("woff");
+    font-weight: normal;
+    font-size: normal;
+}
+
+a
+{
+    color: rgb(255, 255, 255);
+}
+
+body
+{
+    display: flex;
+    margin: 0;
+}
+
+.backgroundImage
+{
+    height: 100vh;
+    display: block;
+}
+.backgroundCredit
+{
+    position: absolute;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+    background-color: rgb(71, 71, 71);
+    opacity: .5;
+    width: 100%;
+    text-align: center;
+}
+.backgroundSide
+{
+    width: auto;
+    position: relative;
+}
+
+.websiteName
+{
+    font-family: "titleFont", serif;
+    position: absolute;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 20%;
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.websiteName img
+{
+    opacity: 1;
+    height: 1em;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    filter: invert(100%);
+}
+
+.formSide
+{
+    background-color: rgb(241, 241, 241);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.formInfo
+{
+    height: auto;
+    width: 66ch;
+    margin: 0;
+    font-size: 1.5rem;
+
+    text-align: left;
+    margin-left: var(--form-left-margin);
+    font-weight: bold;
+
+}
+form
+{
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0px 3px 3px 3px rgba(128, 128, 128, 0.336);
+    display: inline-block;
+}
+
+
+.personalInfo, .contactInfo, .password
+{
+    display: block;
+    white-space: nowrap;
+    
+}
+label
+{
+    display: block;
+    letter-spacing: .1rem;
+}
+
+fieldset p
+{
+    margin-left: var(--form-left-margin);
+    margin-right: 4rem;
+    display: inline-block;
+}
+fieldset:last-child
+{
+    margin-bottom: 2rem;
+}
+fieldset
+{
+    border: hidden;
+    margin: 0;
+    padding: 0;
+}
+.formTitle
+{
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-left: var(--form-left-margin);
+}
+#submitButton
+{
+    background-image: linear-gradient(to right,rgb(118, 118, 255),rgb(69, 96, 121));
+    box-shadow: 0px 3px 3px 3px rgba(128, 128, 128, 0.336);
+    width: 150px;
+    height: 50px;
+    margin-left: var(--form-left-margin);
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+input
+{
+    border-style: solid;
+    border-radius: 5px;
+}
+
+input:invalid
+{
+    border-color: red;
+}
+
+label[for="phoneNumber"]::after
+{
+    content: "(555-555-5555)";
+    font-size: .5rem;
+    color: rgb(167, 167, 167);
+}
+input:focus
+{
+    background-color: rgb(205, 255, 205);
+    outline-style: dashed;
+}
+label[class="requiredInput"]::after
+{
+    content: "*";
+    font-size: .5rem;
+    color: rgb(255, 0, 0);
+    
+}
+.logIn
+{
+    margin: 1rem var(--form-left-margin);
+    font-size: .75rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.logIn a
+{
+   color: blue;
+   text-decoration: none;
+}
+.error-message
+{
+    display: none;
+    font-size: .5rem;
+    color: red;
+    position: absolute;
+}
+input[type="password"]:invalid +.error-message
+{
+    display: block;
+}
